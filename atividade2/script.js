@@ -1,14 +1,14 @@
 function calcular() {
-    let saida = document.getElementById('saida')
-    let etanol = Number(document.getElementById('etanol').value)
-    let gasolina = Number(document.getElementById('gasolina').value)
+    var etanol = Number(document.getElementById('etanol').value)
+    var gasolina = Number(document.getElementById('gasolina').value)
 
-    //let soma = peso / (altura * altura)
+    var calculo = etanol / gasolina
 
-    //if (soma <= 18.5) {
-       //saida.innerHTML += `<p>Seu texte deu ${soma}. Abaixo do peso`
-    //}
-    //else if (soma >= 18.6 && soma <= 24.9) {
-        //saida.innerHTML += `<p>Seu texte deu ${soma}. Peso Ideal (Parabéns)`
-    //}
+    if (calculo < 0.7) {
+        document.getElementById('resultado').innerHTML = `<p>Seu resultado deu ${calculo}, Abasteca com Etanol`
+    }
+    else if (calculo > 0.7) {
+        document.getElementById('resultado').innerHTML = `<p>Seu resultado deu ${calculo}, Abasteca com Gasolina`
+    }
 }
+
